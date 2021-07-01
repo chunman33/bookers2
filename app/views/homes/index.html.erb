@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+		<% if flash[:notice] %>
+     <p id="notice">
+       <%= flash[:notice] %>
+     </p>
+    <% end %>
+
+		<h1>Welcom to
+
+		  <i class="fas fa-book"></i><strong>Bookers</strong>  !!
+
+		  </h1>
+		<p>In
+
+		  <i class="fas fa-book"></i><strong>Bookers</strong>, <br>
+
+		  	you can share and exchange your opinions , inpresiions , and emotions<br>
+
+		  	about various books!
+		</p>
+
+
+
+
+			<div class="btn-wrapper col-10 mx-auto">
+        <div class="row">
+          <%=link_to "Log in", new_user_session_path, class: "btn btn-info btn-sm btn-block mb-3 sign_in" %>
+
+
+          <%=link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-sm btn-block sign_up" %>
+
+        </div>
+      </div>
+
+
+
+	</div>
+</div>
