@@ -75,7 +75,7 @@
         <tr>
       <% end %>
       </table>
-      <%= form_with model: @book, @book_comment do |f| %>
+      <%= form_with model: [@book, @book_comment] do |f| %>
         <div class="form-group">
           <%= f.label :comment, 'コメント', class:'control-label' %>
           <%= f.text_area :comment, class:'form-control input-sm', placeholder:'コメントをここに' %>
