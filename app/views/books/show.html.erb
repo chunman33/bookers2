@@ -21,7 +21,7 @@
       <tr>
         <td>
           <%= link_to user_path(@user) do %>
-            <%= attachment_image_tag @user, :profile_image_id, :fill, 50, 50, fallback:'no_image.jpg', size:'50x50' %>
+            <%= attachment_image_tag @user, :profile_image, :fill, 50, 50, fallback:'no_image.jpg', size:'50x50' %>
             <br>
             <%= @book.user.name %>
           <% end %>
@@ -75,7 +75,7 @@
         <tr>
       <% end %>
       </table>
-      <%= form_for [@book, @book_comment] do |f| %>
+      <%= form_with model: @book, @book_comment do |f| %>
         <div class="form-group">
           <%= f.label :comment, 'コメント', class:'control-label' %>
           <%= f.text_area :comment, class:'form-control input-sm', placeholder:'コメントをここに' %>

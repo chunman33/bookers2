@@ -6,3 +6,6 @@
 #     https: false
 #   )
 # end
+
+
+Refile.secret_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
